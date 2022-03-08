@@ -22,9 +22,16 @@
   /* fonts */
   --fz-base: 1.6rem;
   --fz-small: 1.3rem;
+  --fz-title: 2rem;
+
+  --fw-medium: 500;
+  --fw-bold: 700;
 
   /* colors */
   --bg-base: hsl(210, 46%, 95%);
+  --bg-card: #fff;
+
+  --color-text: hsl(217, 19%, 35%);
 }
 
 html {
@@ -37,6 +44,7 @@ body {
   width: 100%;
   min-height: 100vh;
   background-color: var(--bg-base);
+  font-size: var(--fz-base);
 
   display: grid;
   place-content: center;
@@ -63,8 +71,22 @@ img {
 
 .preview-card {
   max-width: var(--w-mobile);
+  background-color: var(--bg-card);
+  border-radius: 15px;
+  overflow: hidden;
 
   display: grid;
+}
+
+.preview-card__body {
+  display: grid;
+  row-gap: 2.5;
+}
+
+.preview-card__about-box {
+  padding: 4rem 3rem 0 3rem;
+  display: grid;
+  row-gap: 2rem;
 }
 
 .preview-card__header > img {
@@ -73,12 +95,72 @@ img {
   object-fit: cover;
 }
 
+.preview-card__creator-box {
+  background-color: tomato;
+  padding: 2rem 3rem;
+}
+
+.preview-card__creator {
+  display: grid;
+  grid-template-columns: min-content max-content 1fr;
+  column-gap: 1.5rem;
+  align-items: center;
+}
+
+.preview-card__share-img {
+  justify-self: end;
+  background-color: var(--bg-base);
+  border-radius: 100px;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-content: center;
+}
+
 .preview-card__creator-img {
-  width: 150px;
-  height: 150px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.preview-card__about,
+.preview-card__date {
+  opacity: 0.9;
+}
+
+.preview-card__about,
+.preview-card__title,
+.preview-card__date {
+  color: var(--color-text);
+}
+
+.preview-card__about {
+  font-size: var(--fz-small);
+  line-height: 1.5;
+  font-weight: var(--fw-medium);
+}
+
+.preview-card__creator-info {
+  display: grid;
+}
+
+.preview-card__title {
+  font-weight: var(--fw-bold);
+  font-size: var(--fz-base);
+}
+
+.preview-card__creator-name {
+  font-size: var(--fz-base);
+  font-weight: var(--fw-bold);
+}
+
+.preview-card__date {
+  font-weight: var(--fw-medium);
+  font-size: var(--fz-small);
 }
 
 .icon {
-  width: 30px;
-  height: 30px;
+  width: 15px;
+  height: 15px;
 }
