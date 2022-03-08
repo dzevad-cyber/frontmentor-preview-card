@@ -1,0 +1,23 @@
+{
+  "name": "article-preview-component-master",
+  "version": "1.0.0",
+  "description": "![Design preview for the Article preview component coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "dev:ts": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lulzz/frontmentor-preview-card.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lulzz/frontmentor-preview-card/issues"
+  },
+  "homepage": "https://github.com/lulzz/frontmentor-preview-card#readme",
+  "devDependencies": {
+    "typescript": "^4.6.2"
+  }
+}

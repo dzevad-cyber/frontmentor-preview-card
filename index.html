@@ -11,6 +11,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="./shareBtnAnimationMobile.js" type="module" defer></script>
 
     <title>Frontend Mentor | Article preview component</title>
   </head>
@@ -37,34 +38,75 @@
             </p>
           </section>
           <div class="preview-card__creator-box">
+            <!-- preview-card__creator
+            =============================== -->
             <article class="preview-card__creator">
-              <div class="preview-card__creator-img">
-                <img
-                  src="./images/avatar-michelle.jpg"
-                  alt="creator photo"
-                  title="preview creator"
-                />
+              <div class="preview-card__creator-wrapper">
+                <div class="preview-card__creator-img">
+                  <img
+                    src="./images/avatar-michelle.jpg"
+                    alt="creator photo"
+                    title="preview creator"
+                  />
+                </div>
+                <div class="preview-card__creator-info">
+                  <span class="preview-card__creator-name"
+                    >Michelle Appleton</span
+                  >
+                  <span class="preview-card__date">28 Jun 2020</span>
+                </div>
               </div>
-              <div class="preview-card__creator-info">
-                <span class="preview-card__creator-name"
-                  >Michelle Appleton</span
-                >
-                <span class="preview-card__date">28 Jun 2020</span>
-              </div>
-              <div class="preview-card__share-img">
+
+              <!-- on btn click share component
+              =============================== -->
+              <ul class="preview-card__share">
+                <li>share</li>
+                <li>
+                  <a href="#">
+                    <img
+                      class="icon-plus"
+                      src="./images/icon-facebook.svg"
+                      alt="facebook icon"
+                      title="facebook icon link"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      class="icon-plus"
+                      src="./images/icon-twitter.svg"
+                      alt="twitter"
+                      title="twitter icon link"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      class="icon-plus"
+                      src="./images/icon-pinterest.svg"
+                      alt="pintrest"
+                      title="pintrest icon link"
+                    />
+                  </a>
+                </li>
+              </ul>
+              <!-- ### end on btn click share component -->
+
+              <button class="preview-card__btn-share">
                 <img
                   src="./images/icon-share.svg"
                   alt="share icon"
                   title="share"
                   class="icon"
                 />
-              </div>
+              </button>
             </article>
+            <!-- ### end preview-card__creator -->
           </div>
         </section>
       </article>
     </main>
-    <!--   Michelle Appleton 28 Jun 2020
-    Share -->
   </body>
 </html>
