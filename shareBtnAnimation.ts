@@ -19,12 +19,21 @@ const previewCardBtnShare = document.querySelector(
   '.preview-card__btn-share'
 )! as HTMLButtonElement;
 
-btnShare.addEventListener('click', (e: Event): void => {
-  previewCardCreatorBox.classList.toggle('preview-card__creator-box--onClick');
-  previewCardShare.classList.toggle('preview-card__share--onClick');
-  previewCardCreatorWrapper.classList.toggle(
-    'preview-card__creator-wrapper--onClick'
-  );
+btnShare.addEventListener('click', (e): void => {
+  const mediaQueryDesktop = 62.5 * 16;
+
   iconBtn.classList.toggle('icon-btn--onClick');
   previewCardBtnShare.classList.toggle('preview-card__btn-share--onClick');
+
+  if (screen.width < mediaQueryDesktop) {
+    previewCardCreatorBox.classList.toggle(
+      'preview-card__creator-box--onClick'
+    );
+    previewCardShare.classList.toggle('preview-card__share--onClick');
+    previewCardCreatorWrapper.classList.toggle(
+      'preview-card__creator-wrapper--onClick'
+    );
+  } else {
+    previewCardShare.classList.toggle('preview-card__share--desktop');
+  }
 });

@@ -46,6 +46,7 @@ body {
   min-height: 100vh;
   background-color: var(--bg-base);
   font-size: var(--fz-base);
+  padding: 0 10px;
 
   display: grid;
   place-content: center;
@@ -235,6 +236,57 @@ img {
 .preview-card__btn-share--onClick {
   background-color: var(--bg-btn-share);
 } /* -------------------------------------------- */
+
+/*
+------------------------------
+ DESKTOP styles
+------------------------------
+*/
+@media (min-width: 62.5em) {
+  .preview-card {
+    max-width: 800px;
+    grid-template-columns: 1fr 1.5fr;
+    overflow: visible;
+  }
+
+  .preview-card__header {
+    overflow: hidden;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+
+  .preview-card__creator-box {
+    position: relative;
+  }
+
+  .preview-card__share--desktop {
+    position: absolute;
+    top: -44px;
+    right: -66px;
+    background-color: var(--color-text);
+    opacity: 1;
+    padding: 15px 30px;
+    border-radius: 10px;
+  }
+
+  .preview-card__share--desktop::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: var(--color-text) transparent transparent transparent;
+  }
+
+  .icon-plus {
+    width: 15px;
+    height: 15px;
+  }
+}
 
 /*
 ------------------------------
