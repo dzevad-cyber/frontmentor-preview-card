@@ -135,6 +135,7 @@ img {
   column-gap: 20px;
   opacity: 1;
   transition: opacity 0.3s;
+  z-index: 1;
 }
 
 .preview-card__creator-img {
@@ -212,7 +213,7 @@ img {
 }
 
 /* on preview-card__btn-share clicked styles
-------------------------------------------------*/
+------------------------------------------------ */
 .preview-card__creator-box--onClick {
   background-color: var(--color-text);
 }
@@ -233,7 +234,7 @@ img {
 
 .preview-card__btn-share--onClick {
   background-color: var(--bg-btn-share);
-} /* ---------------------------------------------------- */
+} /* -------------------------------------------- */
 
 /*
 ------------------------------
