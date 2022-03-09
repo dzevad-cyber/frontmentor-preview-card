@@ -30,6 +30,7 @@
   /* colors */
   --bg-base: hsl(210, 46%, 95%);
   --bg-card: #fff;
+  --bg-btn-share: hsl(214, 17%, 51%);
 
   --color-text: hsl(217, 19%, 35%);
 }
@@ -112,9 +113,11 @@ img {
   border-radius: 100px;
   width: 30px;
   height: 30px;
+  transition: background-color 0.3s;
 }
 
-/* --- preview-card__creator styles --- */
+/* preview-card__creator styles 
+-------------------------------*/
 .preview-card__creator {
   display: grid;
   grid-template-columns: 1fr min-content;
@@ -130,10 +133,8 @@ img {
   grid-auto-flow: column;
   grid-auto-columns: min-content max-content;
   column-gap: 20px;
-
-  opacity: 0;
-  visibility: none;
-  z-index: -1;
+  opacity: 1;
+  transition: opacity 0.3s;
 }
 
 .preview-card__creator-img {
@@ -146,9 +147,9 @@ img {
 .preview-card__creator-info {
   display: grid;
 }
-/* --- preview-card__creator styles END --- */
 
-/* --- preview-card__share styles --- */
+/* preview-card__share styles 
+-----------------------------*/
 .preview-card__share {
   display: grid;
   grid-row: 1 / 2;
@@ -156,14 +157,15 @@ img {
   align-items: center;
 
   grid-auto-flow: column;
+  grid-auto-columns: min-content;
+  column-gap: 20px;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
-/* --- preview-card__share styles END --- */
 
-/* --- on preview-card__btn-share clicked styles ---*/
-.preview-card__creator-box--onClick {
-  background-color: var(--color-text);
-}
-/* --- on preview-card__btn-share clicked styles END --- */
+.preview-card__share > li > a {
+  display: grid;
+} /* ------------------------ */
 
 .preview-card__about,
 .preview-card__date {
@@ -198,12 +200,53 @@ img {
   font-size: var(--fz-small);
 }
 
-.icon {
+.icon-btn {
   width: 15px;
   height: 15px;
+  transition: background-color 0.3s;
 }
 
 .icon-plus {
   width: 25px;
   height: 25px;
+}
+
+/* on preview-card__btn-share clicked styles
+------------------------------------------------*/
+.preview-card__creator-box--onClick {
+  background-color: var(--color-text);
+}
+
+.preview-card__share--onClick {
+  opacity: 1;
+  z-index: 1;
+}
+
+.preview-card__creator-wrapper--onClick {
+  opacity: 0;
+  z-index: -1;
+}
+
+.icon-btn--onClick {
+  fill: var(--bg-card);
+}
+
+.preview-card__btn-share--onClick {
+  background-color: var(--bg-btn-share);
+} /* ---------------------------------------------------- */
+
+/*
+------------------------------
+ UTILITY styles
+------------------------------
+*/
+.txt-uppercase {
+  text-transform: uppercase;
+}
+
+.color-txt {
+  color: var(--bg-card);
+  opacity: 0.9;
+  letter-spacing: 3px;
+  font-size: var(--fz-small);
 }
