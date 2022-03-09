@@ -23,8 +23,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/lulzz/frontmentor-preview-card/settings/pages)
-- Live Site URL: [Add live site URL here](https://lulzz.github.io/frontmentor-preview-card/)
+- Live Site URL: [Visit live site here](https://lulzz.github.io/frontmentor-preview-card/)
 
 ### Built with
 
