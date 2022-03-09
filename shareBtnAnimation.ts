@@ -20,7 +20,7 @@ const previewCardBtnShare = document.querySelector(
 )! as HTMLButtonElement;
 
 btnShare.addEventListener('click', (e): void => {
-  const mediaQueryDesktop = 62.5 * 16;
+  const mediaQueryDesktop = 62.5 * 16; // em * px = px
 
   iconBtn.classList.toggle('icon-btn--onClick');
   previewCardBtnShare.classList.toggle('preview-card__btn-share--onClick');

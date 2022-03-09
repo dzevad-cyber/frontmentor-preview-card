@@ -6,7 +6,7 @@ const previewCardCreatorWrapper = document.querySelector('.preview-card__creator
 const iconBtn = document.querySelector('.icon-btn');
 const previewCardBtnShare = document.querySelector('.preview-card__btn-share');
 btnShare.addEventListener('click', (e) => {
-    const mediaQueryDesktop = 62.5 * 16;
+    const mediaQueryDesktop = 62.5 * 16; // em * px = px
     iconBtn.classList.toggle('icon-btn--onClick');
     previewCardBtnShare.classList.toggle('preview-card__btn-share--onClick');
     if (screen.width < mediaQueryDesktop) {
